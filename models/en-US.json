@@ -30,8 +30,7 @@
               "name": {
                 "value": "Luma Analog Watch",
                 "synonyms": [
-                  "analog watch",
-                  "watch"
+                  "analog watch"
                 ]
               }
             }
@@ -62,11 +61,14 @@
             "put {SEARCHTERM} in my cart",
             "search for {SEARCHTERM}",
             "get {SEARCHTERM}",
+            "get me a {SEARCHTERM}",
+            "get me some {SEARCHTERM}",
             "find {SEARCHTERM}",
             "buy {QUANTITY} {SEARCHTERM}",
             "put {QUANTITY} {SEARCHTERM}",
             "put {QUANTITY} {SEARCHTERM} im my cart",
-            "find {QUANTITY} {SEARCHTERM}"
+            "find {QUANTITY} {SEARCHTERM}",
+            "get me {QUANTITY} {SEARCHTERM}"
           ],
           "slots": [
             {
