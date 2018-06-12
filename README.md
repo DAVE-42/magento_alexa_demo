@@ -41,9 +41,18 @@ To run the skill locally you need to install ngrok.
 - No.
 - Alright then! Bye bye! 
 
+## Product matching
+
+Some products can be stored for quick access in the language model. For this, the name, sku and synonyms 
+are placed inside ```models/en-US.json```.
+If the users says something that is not matched in the language model, the skill performs a product search
+for the specified utterance and if the shop returns results the first one is used.
+
 ## Limitations
 
 - The current version of this prototype can only handle simple products 
 - There is no authentication for different users. This prototype does 
   transactions for one specific user specified in the ```settings.js```
 - If the Magento2 demo store you're using is a bit on slow side you might encounter timeouts.
+- You can only add a certain number of products to the language model directly. Once a skill is published it's
+  hard to update the product list in the language model.
