@@ -1,5 +1,5 @@
 /**
- * Update this settinsg file to suit your needs. If you use a fresh Magento2 demo-store you can leave
+ * Update this settings file to suit your needs. If you use a fresh Magento2 demo-store you can leave
  * username and password (for customer) intact. You still need to update host, admin_user and admin_password.
  *
  * @type {Object}

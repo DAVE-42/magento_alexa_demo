@@ -13,7 +13,7 @@ const languageStrings = {
  * @param {object} context
  */
 function skill (event, context) {
-  var alexa = Alexa.handler(event, context);
+  let alexa = Alexa.handler(event, context);
 
   alexa.resources = languageStrings;
   alexa.registerHandlers(baseHandlers);

@@ -1,4 +1,4 @@
-var request = require('request');
+const request = require('request');
 const querystring = require('querystring');
 const settings = require('./settings');
 
@@ -88,8 +88,7 @@ function getUserCartId(callback) {
         },
         url: 'http://' + settings.host + '/rest/V1/carts/mine',
     }, function (error, response, body) {
-        let cartId = sanitizeResponse(body);
-        options.cartId = cartId;
+        options.cartId = sanitizeResponse(body);;
         callback();
     });
 }
@@ -141,13 +140,14 @@ function search(name, callback) {
     log('Retrieving admin token ...');
     prepareAdmin(
         function () {
-            log('Admin token aquired ...');
+            log('Admin token acquired ...');
             let url = 'http://' + settings.host + '/rest/V1/search?' +
                 'searchCriteria[requestName]=quick_search_container&' +
                 'searchCriteria[filter_groups][0][filters][0][field]=search_term&' +
                 'searchCriteria[filter_groups][0][filters][0][value]=%25' + name + '%25&' +
                 'searchCriteria[current_page]=1&' +
                 'searchCriteria[page_size]=1'
+            ;
 
             log('Sending get request to Magento for product search ...');
             request.get({
@@ -157,7 +157,7 @@ function search(name, callback) {
                 },
                 url: url
             }, function (error, response, body) {
-                let results = JSON.parse(body)
+                let results = JSON.parse(body);
                 if (results.items && results.items.length > 0) {
                     let productId = results.items[0].id;
                     let url = 'http://' + settings.host + '/rest/V1/products?' +
@@ -175,7 +175,7 @@ function search(name, callback) {
                             url: url
                         }, function (error, response, body) {
                             log('Received response ...');
-                            let result = JSON.parse(body)
+                            let result = JSON.parse(body);
                             log(result);
                             callback(result);
                         }
@@ -223,4 +223,4 @@ function prepareAdmin(callback) {
 module.exports = {
     addToCart: addToCart,
     search: search
-}
+};

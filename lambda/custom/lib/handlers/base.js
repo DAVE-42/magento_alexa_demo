@@ -20,7 +20,7 @@ const quit = function () {
  */
 const help = function () {
     emit.call(this, 'ask', this.t('HELP'));
-}
+};
 
 /**
  * Add a product to cart by name handler
@@ -33,7 +33,7 @@ const addToCartByName = function () {
         function (sku) {
             if (!sku) {
                 let userUtterance = getUserProductNameUtterance(that.event.request);
-                let responseText = that.t('PRODUCT_NOT_FOUND', userUtterance) + ' ' + that.t('RETRY')
+                let responseText = that.t('PRODUCT_NOT_FOUND', userUtterance) + ' ' + that.t('RETRY');
                 emit.call(that,
                     'ask',
                     responseText
@@ -48,7 +48,7 @@ const addToCartByName = function () {
             }
         }
     );
-}
+};
 
 /**
  * Determine SKU for the words uttered by the customers
@@ -77,7 +77,7 @@ const getSku = function (request, callback) {
         }
     }
     callback(sku);
-}
+};
 
 /**
  * Extract what the user said
@@ -90,7 +90,7 @@ const getUserProductNameUtterance = function (request) {
         return request.intent.slots.SEARCHTERM.value
     }
     return '';
-}
+};
 
 /**
  * Get SKU from request for 'add to cart by name'
