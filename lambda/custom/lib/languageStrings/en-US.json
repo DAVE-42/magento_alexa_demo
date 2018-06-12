@@ -1,0 +1,12 @@
+{ 
+    "translation" : { 
+        "WELCOME" : "Welcome. What can I do for you?",
+        "QUIT": "Alright then! Bye bye!",
+        "REPROMPT": "I did not get that.",
+        "ADDTOCART": "I added \"%s\" to your shopping cart. You now have %s items of this type in your cart. Is there anything else I can help you with?",
+        "PRODUCT_NOT_FOUND": "I could not find the product %s in our inventory.",
+        "ERROR": "We have a little problem here",
+        "RETRY": "Would you like to add another product to the shopping cart?",
+        "HELP": "I'm going to help you good!"
+    } 
+}

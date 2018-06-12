@@ -1,0 +1,86 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "types": [
+        {
+          "name": "SEARCHTERM",
+          "values": [
+            {
+              "id": "24-WB04",
+              "name": {
+                "value": "Push It Messenger Bag",
+                "synonyms": [
+                  "messenger bag",
+                  "bag"
+                ]
+              }
+            },
+            {
+              "id": "24-WG088",
+              "name": {
+                "value": "Sprite Foam Roller",
+                "synonyms": [
+                  "foam roller",
+                  "roller"
+                ]
+              }
+            },
+            {
+              "id": "24-WG09",
+              "name": {
+                "value": "Luma Analog Watch",
+                "synonyms": [
+                  "analog watch",
+                  "watch"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "No",
+            "No thanks"
+          ]
+        },
+        {
+          "name": "AddToCartByNameIntent",
+          "samples": [
+            "for {SEARCHTERM}",
+            "bye {SEARCHTERM}",
+            "put {SEARCHTERM} in my cart",
+            "search for {SEARCHTERM}",
+            "get {SEARCHTERM}",
+            "find {SEARCHTERM}",
+            "buy {QUANTITY} {SEARCHTERM}",
+            "put {QUANTITY} {SEARCHTERM}",
+            "put {QUANTITY} {SEARCHTERM} im my cart",
+            "find {QUANTITY} {SEARCHTERM}"
+          ],
+          "slots": [
+            {
+              "name": "SEARCHTERM",
+              "type": "SEARCHTERM"
+            },
+            {
+              "name": "QUANTITY",
+              "type": "AMAZON.NUMBER"
+            }
+          ]
+        }
+      ],
+      "invocationName": "magento demo"
+    }
+  }
+}
