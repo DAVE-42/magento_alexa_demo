@@ -3,7 +3,7 @@
 ## Prerequisites
 
 This prototype and documentation assumes that you have reasonable experience building Alexa
- Skills and developing Magento-based applications.
+Skills and developing Magento-based applications.
 
 To test this prototype you need a functioning Magento2 store with the Rest-API enabled. 
 The shop needs to have simple products in the inventory that can be added to the cart.
@@ -46,3 +46,4 @@ To run the skill locally you need to install ngrok.
 - The current version of this prototype can only handle simple products 
 - There is no authentication for different users. This prototype does 
   transactions for one specific user specified in the ```settings.js```
+- If the Magento2 demo store you're using is a bit on slow side you might encounter timeouts.
